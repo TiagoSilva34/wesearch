@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { AvatarService } from "./api/Avatar.service"
-import Image from 'next/image'
+import { AvatarService } from "./api/avatar.service"
+
 const Ex03: React.FC = () => {
     const [avatares, setAvatares] = useState<any[]>([])
 

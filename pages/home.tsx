@@ -5,7 +5,7 @@ import {
     Typography 
 } from "@mui/material"
 import { useContext, useEffect, useState } from "react";
-import { TabelaService } from "./api/Tabela.service"
+import { TabelaService } from "./api/tabela.service"
 import { ICar } from "./interface";
 import styles from "../styles/Home.module.css"
 import { CarContext } from "../contexts/car";

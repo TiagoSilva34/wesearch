@@ -1,4 +1,4 @@
-const Ex03: React.FC = () => {
+const Ex04: React.FC = () => {
     function checkIfTheFirstLetterIsUppercase(word: string) {
         if(word.charAt(0) === word.charAt(0).toUpperCase()) {
             return true
@@ -16,4 +16,4 @@ const Ex03: React.FC = () => {
     )
 }
 
-export default Ex03
+export default Ex04
