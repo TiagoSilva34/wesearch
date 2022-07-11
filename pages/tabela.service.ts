@@ -1,5 +1,5 @@
-import { IInfoProps } from "../../contexts/car";
-import { IAvatar, ICar, IModels } from "../interface";
+import { IInfoProps } from "./car";
+import { IAvatar, ICar, IModels } from "./interface";
 import { Api } from "./index.service";
 
 const getBrands = async(): Promise<ICar[] | Error> => {

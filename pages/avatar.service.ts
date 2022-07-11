@@ -1,4 +1,4 @@
-import { IAvatar } from "../interface"
+import { IAvatar } from "./interface"
 import { ApiAvatar } from "./index.service"
 
 const getAvatar = async(): Promise<IAvatar | Error> => {

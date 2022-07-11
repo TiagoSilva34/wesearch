@@ -3,7 +3,7 @@ import { SERVFAIL } from "dns";
 import { NextPage } from "next"
 import { useRouter } from "next/router"
 import { useEffect, useState } from "react";
-import { IInfoProps } from "../contexts/car";
+import { IInfoProps } from "./car";
 import styles from "../styles/Details.module.css"
 
 const Result: NextPage = () => {
