@@ -5,7 +5,7 @@ import {
     Typography 
 } from "@mui/material"
 import { useContext, useEffect, useState } from "react";
-import { TabelaService } from "./api/tabela.service"
+import { tabelaService } from "./api/tabela.service"
 import { ICar } from "./interface";
 import styles from "../styles/Home.module.css"
 import { CarContext } from "../contexts/car";
@@ -20,7 +20,6 @@ const Home: React.FC = () => {
     const [codeBrand, setCodeBrand] = useState<any>("")
     const [codeModel, setCodeModel] = useState<any>("")
     const [codeYear, setCodeYear] = useState<any>("")
-    const [isDisabled, setIsDisabled] = useState<boolean>(false)
 
     const defaultPropsBrands = {
         options: brands,
@@ -38,7 +37,7 @@ const Home: React.FC = () => {
     };
 
     useEffect(() => {
-        TabelaService.getBrands()
+        tabelaService.getBrands()
         .then(result => {
             if(result instanceof Error) {
                 alert(result.message)
@@ -51,7 +50,7 @@ const Home: React.FC = () => {
     
     useEffect(() => {
         if(codeBrand) {
-            TabelaService.getModels(codeBrand)
+            tabelaService.getModels(codeBrand)
             .then(result => {
                 if(result instanceof Error) {
                     alert(result.message)
@@ -64,7 +63,7 @@ const Home: React.FC = () => {
 
     useEffect(() => {
         if(codeModel) {
-            TabelaService.getYears(codeBrand, codeModel)
+            tabelaService.getYears(codeBrand, codeModel)
             .then(result => {
                 if(result instanceof Error) {
                     alert(result.message)
@@ -77,7 +76,7 @@ const Home: React.FC = () => {
 
     useEffect(() => {
         if(codeYear) {
-            TabelaService.getCarInfo(codeBrand, codeModel, codeYear)
+            tabelaService.getCarInfo(codeBrand, codeModel, codeYear)
             .then(result => {
                 if(result instanceof Error) {
                     alert(result.message)

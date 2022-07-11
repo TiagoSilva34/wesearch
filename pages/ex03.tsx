@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { AvatarService } from "./api/avatar.service"
+import { avatarService } from "./api/avatar.service"
 
 const Ex03: React.FC = () => {
     const [avatares, setAvatares] = useState<any[]>([])
 
     useEffect(() => {
-        AvatarService.getAvatar()
+        avatarService.getAvatar()
         .then(result => {
             if(result instanceof Error) {
                 alert(result.message)

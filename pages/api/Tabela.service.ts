@@ -39,7 +39,7 @@ const getCarInfo = async(code: string, codeYear: string, codeInfo: string): Prom
 }
 
 
-export const TabelaService = {
+export const tabelaService = {
     getBrands,
     getModels,
     getYears,
