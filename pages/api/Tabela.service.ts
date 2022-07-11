@@ -39,9 +39,11 @@ const getCarInfo = async(code: string, codeYear: string, codeInfo: string): Prom
 }
 
 
-export const tabelaService = {
+const tabelaService =  {
     getBrands,
     getModels,
     getYears,
     getCarInfo,
 }
+
+export default tabelaService

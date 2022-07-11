@@ -11,6 +11,8 @@ const getAvatar = async(): Promise<IAvatar | Error> => {
     }
 }
 
-export const avatarService = {
+const avatarService = {
     getAvatar
 }
+
+export default avatarService
